@@ -13,7 +13,7 @@ int main()
 //
 //		if( 10 < i)
 //		{
-//			i = 1;
+//			i = 1; 
 //		}
 //        vSetEngineSpeed(10*i);
 //		__delay_ms(300);
