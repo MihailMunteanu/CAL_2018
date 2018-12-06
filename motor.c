@@ -6,7 +6,6 @@
 void vEngineInit(void)
 {
 	GPIO_u8SetPortPin(PORT_A,9,DIGITAL,FORWARD);
-	PWM1_vInit();
 }
 void vSetEngineDir(BOOL bDir)
 {
