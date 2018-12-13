@@ -1,11 +1,9 @@
-#include "general.h"
-#include "motor.h"
-#include "servomotor.h"
 #include "sys_tasks.h"
 int main()
 {
 	TASK_Inits();
-	TASK_vSchedule();
+	TASK_vSchedule(); //we need to comment THIS if we want to test in main
+
 ////#for engine#
 //	vSetEngineDir(FORWARD);
 //	vSetEngineSpeed(50);
@@ -21,6 +19,7 @@ int main()
 //
 //   // }
 //
+
 ////#for servomotor
 //		for (i=60; i<=120; i++)
 //		{
@@ -33,5 +32,26 @@ int main()
 //			__delay_ms(50);
 //		}
 //
+
+////for linefollower
+//	T_U8 u8lineFollowerBits = 0;
+//	while(1)
+//	{
+//	u8lineFollowerBits = vReadLineFollowerPin();
+//		if ( 0 == u8lineFollowerBits )
+//		{
+//			vSetEngineDir(FORWARD);
+//			vSetEngineSpeed(20);
+//		}
+//		else
+//		{
+//			vSetEngineDir(BACKWARD);
+//			vSetEngineSpeed(20);
+//		}
+//	}
+
+//for 
+
+
     return 0;
 }

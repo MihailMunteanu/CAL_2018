@@ -7,14 +7,18 @@
 
 #include "general.h"
 #include "sys_tasks.h"
-
 #include "mcal_init.h"
+#include "m_asw.h"
+
+
+
+
 
 void TASK_Inits()
 {
     MCAL_vInit();
     GPIO_u8SetPortPin(PORT_A, 10, DIGITAL, OUTPUT);	
-	vEngineInit();
+	RTE_vEngineInit();
 }
 
 void TASK_1ms()
@@ -34,14 +38,7 @@ void TASK_10ms()
 
 void TASK_100ms()
 { 
-	static T_U8 i = 60;
-	static T_S8 directie = 1;
-    i=i+directie;
-	vServoPosition(i);
-	if (( 120 == i ) || ( 60 == i))
-	{
-		directie = directie * (-1);
-	}
+	vFollowLine();
 }
 
 void TASK_500ms()

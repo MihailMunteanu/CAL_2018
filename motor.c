@@ -13,5 +13,13 @@ void vSetEngineDir(BOOL bDir)
 }
 void vSetEngineSpeed(T_U8 u8Speed)
 {
+	if ( 100 < u8Speed )
+	{
+		u8Speed = 100;
+	}
+	if ( 0 > u8Speed )
+	{
+		u8Speed = 0;
+	}
 	PWM1_vSetDuty(u8Speed,2);
 }
