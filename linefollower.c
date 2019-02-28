@@ -4,7 +4,7 @@
 
 void vLineFollowerInit(BOOL INOUT) //initialize pin as input or output
 {
-	int i;
+	T_U16 i;
 	for (i = 5; i >= 0; i--)
 	{
 		GPIO_u8SetPortPin(PORT_C,i,DIGITAL,INOUT);
@@ -13,7 +13,7 @@ void vLineFollowerInit(BOOL INOUT) //initialize pin as input or output
 
 void vSetLineFolowerPin(BOOL bValue) //set pin value to logicall 1 or 0
 {
-	int i;
+	T_U16 i;
 	for (i = 5; i >= 0; i--)
 	{
 		GPIO_u8WritePortPin(PORT_C,i,bValue);

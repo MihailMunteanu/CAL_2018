@@ -17,7 +17,7 @@ void vSetEngineSpeed(T_U8 u8Speed)
 	{
 		u8Speed = 100;
 	}
-	if ( 0 > u8Speed )
+	if ( 10 > u8Speed )
 	{
 		u8Speed = 0;
 	}
