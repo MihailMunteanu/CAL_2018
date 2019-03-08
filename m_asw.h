@@ -6,6 +6,7 @@
 
 void vFollowLine(void);
 void vCheckBattery (void);
+void vRun20Cm(void);
 
 #endif	/* M_ASW_H */
 

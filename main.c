@@ -1,4 +1,7 @@
 #include "sys_tasks.h"
+#include "sys_schedule.h"
+#pragma config ICS = PGD2               // Comm Channel Select (Communicate on PGC2/EMUC2 and PGD2/EMUD2)
+#pragma config JTAGEN = ON              // JTAG Port Enable (JTAG is Enabled)
 int main()
 {
 	TASK_Inits();

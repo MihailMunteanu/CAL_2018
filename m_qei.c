@@ -1,5 +1,4 @@
-#include"general.h"
-#include"mcal_gpio.h"
+
 #include "m_qei.h"
 
 T_F16 QEI_s16getElapsed(void)

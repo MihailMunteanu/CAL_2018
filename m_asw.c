@@ -30,9 +30,22 @@ void vFollowLine(void){
 
 void vCheckBattery (void)
 {
-	if ( 75 <= RTE_vBatteryPercent())
+	if ( 30 >= RTE_vBatteryPercent())
 	{
-		//stop car
+		RTE_vSetEngineSpeed(0);//stop car
 	}
 	
+}
+void vRun20Cm(void)
+{
+	static T_F16 f16totalCmDriven = 0;
+	f16totalCmDriven = f16totalCmDriven + QEI_s16getElapsed();
+	if ( 20 <= f16totalCmDriven )
+	{
+		vFollowLine();
+	}
+	else
+	{
+		RTE_vSetEngineSpeed(0);
+	}
 }

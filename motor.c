@@ -1,6 +1,3 @@
-#include"general.h"
-#include"mcal_pwm.h"
-#include"mcal_gpio.h"
 #include"motor.h"
 
 void vEngineInit(void)

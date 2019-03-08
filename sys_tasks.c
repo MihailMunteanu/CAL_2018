@@ -23,16 +23,17 @@ void TASK_Inits()
 
 void TASK_1ms()
 {
-
+    
 }
 
 void TASK_5ms()
 {
-
+    RTE_vReactToObstacle();
 }
 
 void TASK_10ms()
-{   
+{  
+    vRun20Cm();
 	static T_F16 f16totalCmDriven = 0;
 	f16totalCmDriven = f16totalCmDriven + QEI_s16getElapsed();
 	if ( 20 <= f16totalCmDriven )
@@ -57,5 +58,6 @@ void TASK_500ms()
 
 void TASK_1000ms()
 {
-	vCheckBattery();
+//	vCheckBattery();
+//   	vCheckBattery();
 }
