@@ -9,6 +9,7 @@
 #include "sys_tasks.h"
 #include "mcal_init.h"
 #include "m_asw.h"
+#include "asw_com.h"
 
 
 
@@ -23,7 +24,9 @@ void TASK_Inits()
 
 void TASK_1ms()
 {
-    
+    COM_vStartListening();
+    COM_vCheckIRQ();
+    COM_vProcessFIFO();
 }
 
 void TASK_5ms()

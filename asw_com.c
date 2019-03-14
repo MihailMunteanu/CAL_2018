@@ -1,12 +1,12 @@
 /* 
  * File:   asw_com.c
- * Author: Cristian T. A.
- *
- * Created on August 28, 2018, 9:37 AM
+ * Author:                  Reason:
+ *          Cristian T. A.          Created on August 28, 2018, 9:37 AM
+ *          Mihail Munteanu         Modificari pt comunicare 14.03.2019
  */
 
 #include "general.h"
-#include "rte.h"
+#include "m_rte.h"
 #include "asw_com.h"
 
 
