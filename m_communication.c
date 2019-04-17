@@ -24,17 +24,14 @@ void vInterpretMessage (T_U8 u8Message)
         if ( 0 == bQueueFull )
         {
             T_U8 u8MessageCopy = u8Message;
-            sQueue[u8Index].u8Road = u8MessageCopy >> 6;
-            u8MessageCopy = u8Message;
             sQueue[u8Index].u8Direction = (u8MessageCopy >> 4) & 3;
+            sQueue[u8Index].u8Road = u8MessageCopy >> 6;
             sQueue[u8Index].bPassedIntersection = 0;
             sQueue[u8Index].bIsInIntersection = 0;
-            if ( u8Message & 1 ) 
-            {
-                u8CarID = sQueue[u8Index].u8Road;
-            }
+            u8CarID = sQueue[u8Index].u8Road;
             if ( 3 == u8Index )
             {
+                //if this is the last car to be added in queue, do not enter this section
                 bQueueFull = 1;
                 u8Index = 0;
             }

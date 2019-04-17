@@ -20,9 +20,9 @@ void TASK_Inits()
 
 void TASK_1ms()
 {
-    COM_vStartListening();
-    COM_vCheckIRQ();
-    COM_vProcessFIFO();
+//    COM_vStartListening();
+//    COM_vCheckIRQ();
+//    COM_vProcessFIFO();
 }
 
 void TASK_5ms()
@@ -32,7 +32,7 @@ void TASK_5ms()
 
 void TASK_10ms()
 {  
-    vRun20Cm();
+    vFollowLine();
 }
 
 void TASK_100ms()
