@@ -1,5 +1,3 @@
-#include"general.h"
-#include"mcal_pwm.h"
 #include"servomotor.h"
 
 

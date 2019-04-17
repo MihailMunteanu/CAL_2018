@@ -11,10 +11,6 @@
 #include "m_asw.h"
 #include "asw_com.h"
 
-
-
-
-
 void TASK_Inits()
 {
     MCAL_vInit();
@@ -37,16 +33,6 @@ void TASK_5ms()
 void TASK_10ms()
 {  
     vRun20Cm();
-	static T_F16 f16totalCmDriven = 0;
-	f16totalCmDriven = f16totalCmDriven + QEI_s16getElapsed();
-	if ( 20 <= f16totalCmDriven )
-	{
-		vFollowLine();
-	}
-	else
-	{
-		RTE_vSetEngineSpeed(0);
-	}
 }
 
 void TASK_100ms()
@@ -61,6 +47,5 @@ void TASK_500ms()
 
 void TASK_1000ms()
 {
-//	vCheckBattery();
-//   	vCheckBattery();
+	vCheckBattery();
 }

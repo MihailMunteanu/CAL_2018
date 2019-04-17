@@ -1,6 +1,4 @@
-#include"general.h"
-#include"mcal_gpio.h"
-#include"linefollower.h"
+#include"m_linefollower.h"
 
 void vLineFollowerInit(BOOL INOUT) //initialize pin as input or output
 {
@@ -23,7 +21,6 @@ void vSetLineFolowerPin(BOOL bValue) //set pin value to logicall 1 or 0
 T_U8 vReadLineFollowerPin() //read pin value
 {
 	T_U16 u16PortValue = 0;
-	//T_U8 u8returnValue = 0;
 	vLineFollowerInit(OUTPUT);
 	vSetLineFolowerPin(1);
 	__delay_us(10);
